@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Entity Framework\\ORM Fundamentals\\MiniORM\\MiniORM.csproj": {}
+    "G:\\SoftUni-EntityFramework\\ORM Fundamentals\\MiniORM\\MiniORM.csproj": {}
   },
   "projects": {
-    "G:\\Entity Framework\\ORM Fundamentals\\MiniORM\\MiniORM.csproj": {
+    "G:\\SoftUni-EntityFramework\\ORM Fundamentals\\MiniORM\\MiniORM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Entity Framework\\ORM Fundamentals\\MiniORM\\MiniORM.csproj",
+        "projectUniqueName": "G:\\SoftUni-EntityFramework\\ORM Fundamentals\\MiniORM\\MiniORM.csproj",
         "projectName": "MiniORM",
-        "projectPath": "G:\\Entity Framework\\ORM Fundamentals\\MiniORM\\MiniORM.csproj",
+        "projectPath": "G:\\SoftUni-EntityFramework\\ORM Fundamentals\\MiniORM\\MiniORM.csproj",
         "packagesPath": "C:\\Users\\Valentin Markov\\.nuget\\packages\\",
-        "outputPath": "G:\\Entity Framework\\ORM Fundamentals\\MiniORM\\obj\\",
+        "outputPath": "G:\\SoftUni-EntityFramework\\ORM Fundamentals\\MiniORM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Valentin Markov\\AppData\\Roaming\\NuGet\\NuGet.Config",

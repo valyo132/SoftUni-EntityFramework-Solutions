@@ -1,4 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection;
 
 namespace MiniORM
@@ -92,7 +94,7 @@ namespace MiniORM
         private void Persist<TEntity>(DbSet<TEntity> dbSet)
             where TEntity : class, new()
         {
-            var tableName = GetTableNames(typeof(TEntity));
+            var tableName = GetTableName(typeof(TEntity));
 
             var columns = _connection.FetchColumnNames(tableName)
                 .ToArray();
@@ -158,12 +160,12 @@ namespace MiniORM
 
             var collections = entityType
                 .GetProperties()
-                .Where(p => p.PropertyType.IsGenericType && p.PropertyType.GetGenericTypeDefinition() == typeof(ICollection))
+                .Where(p => p.PropertyType.IsGenericType && p.PropertyType.GetGenericTypeDefinition() == typeof(ICollection<>))
                 .ToArray();
 
             foreach (var collection in collections)
             {
-                var collectionType = collection.PropertyType.GeneticTypeArguments.First();
+                var collectionType = collection.PropertyType.GetGenericArguments().First();
 
                 var mapCollectionMethod = typeof(DbContext)
                     .GetMethod("MapCollection", BindingFlags.Instance| BindingFlags.NonPublic)
@@ -171,6 +173,130 @@ namespace MiniORM
 
                 mapCollectionMethod.Invoke(this, new object[] { dbSet, collection });
             }
+        }
+
+        private void MapCollection<TDbSet, TCollection>(DbSet<TDbSet> dbSet, PropertyInfo collectionProperty)
+            where TDbSet : class, new()
+            where TCollection : class, new()
+        {
+            var entityType = typeof(TDbSet);
+            var collectionType = typeof(TCollection);
+
+            var primaryKeys = collectionType.GetProperties()
+                .Where(p => p.HasAttribute<KeyAttribute>())
+                .ToArray();
+
+            var primaryKey = primaryKeys.First();
+            var foreignKey = entityType.GetProperties()
+                .First(p => p.HasAttribute<KeyAttribute>());
+
+            var isManyToMany = primaryKeys.Length >= 2;
+
+            if (isManyToMany)
+            {
+                primaryKey = collectionType.GetProperties()
+                    .First(p => collectionType.GetProperty(p.GetCustomAttribute<ForeignKeyAttribute>().Name).PropertyType == entityType);
+            }
+
+            var navigationDbSet = (DbSet<TCollection>)_dbSetProperties[collectionType].GetValue(this);
+
+            foreach (var entity in dbSet)
+            {
+                var primaryKeyValue = foreignKey.GetValue(entity);
+
+                var navigationEntities = navigationDbSet
+                    .Where(x => primaryKey.GetValue(x).Equals(primaryKeyValue))
+                    .ToArray();
+
+                ReflectionHelper.ReplaceBackingField(entity, collectionProperty.Name, navigationEntities);
+            }
+        }
+
+        private void MapNavigationProperties<TEntity>(DbSet<TEntity> dbSet)
+            where TEntity : class, new()
+        {
+            var entityType = typeof(TEntity);
+
+            var foreignKeys = entityType.GetProperties()
+                .Where(p => p.HasAttribute<ForeignKeyAttribute>())
+                .ToArray();
+
+            foreach (var foreignKey in foreignKeys)
+            {
+                var navigationPropertyName = foreignKey.GetCustomAttribute<ForeignKeyAttribute>().Name;
+
+                var navigationProperty = entityType.GetProperty(navigationPropertyName);
+
+                var navigationDbSet = _dbSetProperties[navigationProperty.PropertyType]
+                    .GetValue(this);
+
+                var navigationPrimaryKey = navigationProperty.PropertyType.GetProperties()
+                    .First(p => p.HasAttribute<KeyAttribute>());
+
+                foreach (var entity in dbSet)
+                {
+                    var foreignKeyValue = foreignKey.GetValue(entity);
+
+                    var navigationPropertyValue = ((IEnumerable<object>)navigationDbSet)
+                        .First(x => navigationPrimaryKey.GetValue(x).Equals(foreignKeyValue));
+
+                    navigationProperty.SetValue(entity, navigationPropertyValue);
+                }
+            }
+        }
+
+        private static bool IsObjectValid(object e)
+        {
+            var validationContext = new ValidationContext(e);
+            var validationError = new List<ValidationResult>();
+            var validationResult = Validator.TryValidateObject(e, validationContext, validationError, true);
+
+            return validationResult;
+        }
+
+        private IEnumerable<TEntity> LoadTableEntities<TEntity>()
+            where TEntity : class
+        {
+            var table = typeof(TEntity);
+            var columns = GetEntityColumnNames(table);
+            var tableName = GetTableName(table);
+            var fetchedRows = _connection.FetchResultSet<TEntity>(tableName, columns).ToArray();
+
+            return fetchedRows;
+        }
+
+        private string GetTableName(Type tableType)
+        {
+            var tableName = ((TableAttribute)Attribute.GetCustomAttribute(tableType, typeof(TableAttribute))).Name;
+
+            if (tableName == null)
+                tableName = _dbSetProperties[tableType].Name;
+
+            return tableName;
+        }
+
+        private Dictionary<Type, PropertyInfo> DiscoverDbSets()
+        {
+            var dbSets = GetType().GetProperties()
+                .Where(p => p.PropertyType.GetGenericTypeDefinition() == typeof(DbSet<>))
+                .ToDictionary(p => p.PropertyType.GetGenericArguments().First(), p => p);
+
+            return dbSets;
+        }
+
+        private string[] GetEntityColumnNames(Type table)
+        {
+            var tableName = GetTableName(table);
+            var dbColumns = _connection.FetchColumnNames(tableName);
+
+            var columns = table.GetProperties()
+                .Where(p => dbColumns.Contains(p.Name) &&
+                !p.HasAttribute<NotMappedAttribute>() &&
+                AllowedSqlTypes.Contains(p.PropertyType))
+                .Select(p => p.Name)
+                .ToArray();
+
+            return columns;
         }
     }
 }

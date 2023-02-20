@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1OIdVDvWFTnB6QE9HC/oqDkYqzO1/7oo+064wkklyCagZE2UCn4NlC2F7FAPvLhKRzGtNhxWTuI6FhYqIdsJ0Q==",
+  "dgSpecHash": "deETIJgoYnK9OM6y0BFzWkfVUkR6ohZj8TkWDy9oAk4452YdahNrJyQq8fFyuijjmqNpVOFp+3qxkYueCRh3sw==",
   "success": true,
-  "projectFilePath": "G:\\Entity Framework\\ORM Fundamentals\\MiniORM\\MiniORM.csproj",
+  "projectFilePath": "G:\\SoftUni-EntityFramework\\ORM Fundamentals\\MiniORM\\MiniORM.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Valentin Markov\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Valentin Markov\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
