@@ -2013,11 +2013,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Entity Framework\\SoftUni\\SoftUni\\SoftUni.csproj",
+      "projectUniqueName": "G:\\SoftUni-EntityFramework\\SoftUni\\SoftUni\\SoftUni.csproj",
       "projectName": "SoftUni",
-      "projectPath": "G:\\Entity Framework\\SoftUni\\SoftUni\\SoftUni.csproj",
+      "projectPath": "G:\\SoftUni-EntityFramework\\SoftUni\\SoftUni\\SoftUni.csproj",
       "packagesPath": "C:\\Users\\Valentin Markov\\.nuget\\packages\\",
-      "outputPath": "G:\\Entity Framework\\SoftUni\\SoftUni\\obj\\",
+      "outputPath": "G:\\SoftUni-EntityFramework\\SoftUni\\SoftUni\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Valentin Markov\\AppData\\Roaming\\NuGet\\NuGet.Config",

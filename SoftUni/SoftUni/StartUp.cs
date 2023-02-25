@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SoftUni.Data;
 using SoftUni.Models;
+using System.ComponentModel.DataAnnotations;
 using System.Globalization;
-using System.Reflection.Emit;
-using System.Runtime.ExceptionServices;
 using System.Text;
 
 namespace SoftUni
@@ -16,8 +15,22 @@ namespace SoftUni
 
             string result = string.Empty;
 
+            // Problem 15
+            //result = RemoveTown(context);
+
+            // Problem 14
+
+            // Problem 13
+            //result = GetEmployeesByFirstNameStartingWithSa(context);
+
+            // Problem 12
+            //result = IncreaseSalaries(context);
+
+            // Problem 11
+            //result = GetLatestProjects(context);
+
             // Problem 10
-            result = GetDepartmentsWithMoreThan5Employees(context);
+            //result = GetDepartmentsWithMoreThan5Employees(context);
 
             // Problem 09
             // Compile Time Error
@@ -43,6 +56,108 @@ namespace SoftUni
             //result = GetEmployeesFullInformation(context);
 
             Console.WriteLine(result);
+        }
+
+        // Problem 15
+        public static string RemoveTown(SoftUniContext context)
+        {
+            var townToDelete = context.Towns
+                .Where(t => t.Name == "Seattle")
+                .FirstOrDefault();
+
+            var addressesToDelete = context.Addresses
+                .Where(a => a.TownId == townToDelete.TownId)
+                .ToList();
+
+            var employeesToDeleteAddress = context.Employees
+                .Where(a => addressesToDelete.Contains(a.Address))
+                .ToList();
+
+            foreach (var e in employeesToDeleteAddress)
+            {
+                e.AddressId = null;
+            }
+
+            context.Addresses.RemoveRange(addressesToDelete);
+            context.Towns.Remove(townToDelete);
+            context.SaveChanges();
+
+            return $"{addressesToDelete.Count} addresses in Seattle were deleted";
+        }
+
+        // Problem 14
+        public static string DeleteProjectById(SoftUniContext context)
+        {
+            return null;
+        }
+
+        // Problem 13
+        public static string GetEmployeesByFirstNameStartingWithSa(SoftUniContext context)
+        {
+            var employees = context.Employees
+                .AsNoTracking()
+                .Where(e => e.FirstName.StartsWith("Sa"))
+                .OrderBy(e => e.FirstName)
+                .ThenBy(e => e.LastName)
+                .Select(e => $"{e.FirstName} {e.LastName} - {e.JobTitle} - (${e.Salary:f2})")
+                .ToList();
+
+            return string.Join(Environment.NewLine, employees);
+        }
+
+        // Problem 12
+        public static string IncreaseSalaries(SoftUniContext context)
+        {
+            decimal salaryModifier = 1.12m;
+            string[] departmentNames = new string[] { "Engineering", "Tool Design", "Marketing", "Information Services" };
+
+            var employeesForSalaryIncrease = context.Employees
+                .Where(e => departmentNames.Contains(e.Department.Name))
+                .ToArray();
+
+            foreach (var e in employeesForSalaryIncrease)
+            {
+                e.Salary *= salaryModifier;
+            }
+
+            context.SaveChanges();
+
+            string[] emplyeesInfoText = context.Employees
+                .Where(e => departmentNames.Contains(e.Department.Name))
+                .OrderBy(e => e.FirstName)
+                .ThenBy(e => e.LastName)
+                .Select(e => $"{e.FirstName} {e.LastName} (${e.Salary:f2})")
+                .ToArray();
+
+            return string.Join(Environment.NewLine, emplyeesInfoText);
+        }
+
+        // Problem 11
+        public static string GetLatestProjects(SoftUniContext context)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            var projects = context.Projects
+                .AsNoTracking()
+                .OrderByDescending(p => p.StartDate)
+                .Take(10)
+                .OrderBy(p => p.Name)
+                .Select(p => new
+                {
+                    Name = p.Name,
+                    Description = p.Description,
+                    StartDate = p.StartDate.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture)
+                })
+                .ToList();
+
+            foreach (var project in projects)
+            {
+                sb.AppendLine($"{project.Name}");
+                sb.AppendLine($"{project.Description}");
+                sb.AppendLine($"{project.StartDate}");
+            }
+
+            return sb.ToString().TrimEnd();
         }
 
         // Problem 10

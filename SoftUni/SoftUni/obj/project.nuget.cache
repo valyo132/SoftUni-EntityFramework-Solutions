@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BH8rVyI8PwNo7TILXqVlgIvnXqwVV9du1bn9ZFQ00BVrCpHf/iB/OPVM26PZ/EgNnXz9+hk+2dymZLcQe+ZiDA==",
+  "dgSpecHash": "73hwPnYuLaTVaYa6i8qgqfDtTh+i+BpZInUqUt47721Wcg9bkFvsBErqFz7AvD1uqQQ8Rku/KESUIiSO97c1dg==",
   "success": true,
-  "projectFilePath": "G:\\Entity Framework\\SoftUni\\SoftUni\\SoftUni.csproj",
+  "projectFilePath": "G:\\SoftUni-EntityFramework\\SoftUni\\SoftUni\\SoftUni.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Valentin Markov\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Valentin Markov\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
