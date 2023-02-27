@@ -1,0 +1,17 @@
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\obj\Debug\net6.0\P02_FootballBetting.Data.csproj.AssemblyReference.cache
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\obj\Debug\net6.0\P02_FootballBetting.Data.GeneratedMSBuildEditorConfig.editorconfig
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\obj\Debug\net6.0\P02_FootballBetting.Data.AssemblyInfoInputs.cache
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\obj\Debug\net6.0\P02_FootballBetting.Data.AssemblyInfo.cs
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\obj\Debug\net6.0\P02_FootballBetting.Data.csproj.CoreCompileInputs.cache
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\bin\Debug\net6.0\P02_FootballBetting.Data.deps.json
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\bin\Debug\net6.0\P02_FootballBetting.Data.runtimeconfig.json
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\bin\Debug\net6.0\P02_FootballBetting.Data.dll
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\bin\Debug\net6.0\P02_FootballBetting.Data.pdb
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\bin\Debug\net6.0\P02_FootballBetting.Data.Models.dll
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\bin\Debug\net6.0\P02_FootballBetting.Data.Models.pdb
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\obj\Debug\net6.0\P02_FootballBetting.Data.csproj.CopyComplete
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\obj\Debug\net6.0\P02_FootballBetting.Data.dll
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\obj\Debug\net6.0\refint\P02_FootballBetting.Data.dll
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\obj\Debug\net6.0\P02_FootballBetting.Data.pdb
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\obj\Debug\net6.0\P02_FootballBetting.Data.genruntimeconfig.cache
+G:\SoftUni-EntityFramework\Entity Relations\P02_FootballBetting\P02_FootballBetting.Data\obj\Debug\net6.0\ref\P02_FootballBetting.Data.dll
