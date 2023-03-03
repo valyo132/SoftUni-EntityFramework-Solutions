@@ -2,3 +2,4 @@
 SoftUni/SoftUni/Configurations/SoftUniDBConfug.cs
 Entity Relations/P01_StudentSystem/P01_StudentSystem/Configurations/Config.cs
 Entity Relations/P02_FootballBetting/P02_FootballBetting.Data/Configurations/ConfigDb.cs
+LINQ/MusicHub/MusicHub/Data/Configurations/Config.cs
