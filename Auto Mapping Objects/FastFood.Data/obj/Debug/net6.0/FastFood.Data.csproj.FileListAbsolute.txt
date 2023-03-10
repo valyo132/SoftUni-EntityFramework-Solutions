@@ -1,0 +1,17 @@
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\bin\Debug\net6.0\FastFood.Data.deps.json
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\bin\Debug\net6.0\FastFood.Data.runtimeconfig.json
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\bin\Debug\net6.0\FastFood.Data.dll
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\bin\Debug\net6.0\FastFood.Data.pdb
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\bin\Debug\net6.0\FastFood.Models.dll
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\bin\Debug\net6.0\FastFood.Models.pdb
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\obj\Debug\net6.0\FastFood.Data.csproj.AssemblyReference.cache
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\obj\Debug\net6.0\FastFood.Data.GeneratedMSBuildEditorConfig.editorconfig
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\obj\Debug\net6.0\FastFood.Data.AssemblyInfoInputs.cache
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\obj\Debug\net6.0\FastFood.Data.AssemblyInfo.cs
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\obj\Debug\net6.0\FastFood.Data.csproj.CoreCompileInputs.cache
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\obj\Debug\net6.0\FastFood.Data.csproj.CopyComplete
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\obj\Debug\net6.0\FastFood.Data.dll
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\obj\Debug\net6.0\refint\FastFood.Data.dll
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\obj\Debug\net6.0\FastFood.Data.pdb
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\obj\Debug\net6.0\FastFood.Data.genruntimeconfig.cache
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Data\obj\Debug\net6.0\ref\FastFood.Data.dll

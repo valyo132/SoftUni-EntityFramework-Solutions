@@ -1,0 +1,193 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.ConsoleApp\\FastFood.ConsoleApp.csproj": {}
+  },
+  "projects": {
+    "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.ConsoleApp\\FastFood.ConsoleApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.ConsoleApp\\FastFood.ConsoleApp.csproj",
+        "projectName": "FastFood.ConsoleApp",
+        "projectPath": "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.ConsoleApp\\FastFood.ConsoleApp.csproj",
+        "packagesPath": "C:\\Users\\Valentin Markov\\.nuget\\packages\\",
+        "outputPath": "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.ConsoleApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Valentin Markov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.Data\\FastFood.Data.csproj": {
+                "projectPath": "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.Data\\FastFood.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.Data\\FastFood.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.Data\\FastFood.Data.csproj",
+        "projectName": "FastFood.Data",
+        "projectPath": "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.Data\\FastFood.Data.csproj",
+        "packagesPath": "C:\\Users\\Valentin Markov\\.nuget\\packages\\",
+        "outputPath": "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Valentin Markov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.Models\\FastFood.Models.csproj": {
+                "projectPath": "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.Models\\FastFood.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.Models\\FastFood.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.Models\\FastFood.Models.csproj",
+        "projectName": "FastFood.Models",
+        "projectPath": "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.Models\\FastFood.Models.csproj",
+        "packagesPath": "C:\\Users\\Valentin Markov\\.nuget\\packages\\",
+        "outputPath": "G:\\SoftUni-EntityFramework\\Auto Mapping Objects\\FastFood.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Valentin Markov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Models\bin\Debug\net6.0\FastFood.Models.deps.json
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Models\bin\Debug\net6.0\FastFood.Models.dll
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Models\bin\Debug\net6.0\FastFood.Models.pdb
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Models\obj\Debug\net6.0\FastFood.Models.csproj.AssemblyReference.cache
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Models\obj\Debug\net6.0\FastFood.Models.GeneratedMSBuildEditorConfig.editorconfig
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Models\obj\Debug\net6.0\FastFood.Models.AssemblyInfoInputs.cache
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Models\obj\Debug\net6.0\FastFood.Models.AssemblyInfo.cs
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Models\obj\Debug\net6.0\FastFood.Models.csproj.CoreCompileInputs.cache
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Models\obj\Debug\net6.0\FastFood.Models.dll
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Models\obj\Debug\net6.0\refint\FastFood.Models.dll
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Models\obj\Debug\net6.0\FastFood.Models.pdb
+G:\SoftUni-EntityFramework\Auto Mapping Objects\FastFood.Models\obj\Debug\net6.0\ref\FastFood.Models.dll
