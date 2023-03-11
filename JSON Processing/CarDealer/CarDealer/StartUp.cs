@@ -29,9 +29,37 @@ namespace CarDealer
 
             // Problem 11
             json = File.ReadAllText(@"../../../Datasets/cars.json");
-            result = ImportCars(context, json);
+            ImportCars(context, json);
+
+            // Problem 12
+            json = File.ReadAllText(@"../../../Datasets/customers.json");
+            ImportCustomers(context, json);
+
+            // Problem 13
+            json = File.ReadAllText(@"../../../Datasets/sales.json");
+            result = ImportSales(context, json);
 
             Console.WriteLine(result);
+        }
+
+        // Problem 13
+        public static string ImportSales(CarDealerContext context, string inputJson)
+        {
+            var deserializedSales = JsonConvert.DeserializeObject<List<Sale>>(inputJson);
+            context.Sales.AddRange(deserializedSales);
+            context.SaveChanges();
+
+            return $"Successfully imported {deserializedSales.Count}.";
+        }
+
+        // Problem 12
+        public static string ImportCustomers(CarDealerContext context, string inputJson)
+        {
+            var deserializedCustomers = JsonConvert.DeserializeObject<List<Customer>>(inputJson);
+            context.Customers.AddRange(deserializedCustomers);
+            context.SaveChanges();
+
+            return $"Successfully imported {deserializedCustomers.Count}.";
         }
 
         // Problem 11
@@ -53,7 +81,7 @@ namespace CarDealer
 
                 cars.Add(carToAdd);
 
-                foreach (var part in car.PartsId)
+                foreach (var part in car.PartsId.Distinct())
                 {
                     var partCar = new PartCar()
                     {
