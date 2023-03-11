@@ -9,8 +9,6 @@ namespace CarDealer
     {
         public static void Main()
         {
-            // TODO: Chage the connectionstring and remake the database
-
             CarDealerContext context = new CarDealerContext();
 
             context.Database.EnsureDeleted();

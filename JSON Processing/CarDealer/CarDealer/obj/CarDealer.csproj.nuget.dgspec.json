@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\SoftUni EnityFramework\\SoftUni-EntityFramework\\JSON Processing\\CarDealer\\CarDealer\\CarDealer.csproj": {}
+    "G:\\SoftUni-EntityFramework\\JSON Processing\\CarDealer\\CarDealer\\CarDealer.csproj": {}
   },
   "projects": {
-    "G:\\SoftUni EnityFramework\\SoftUni-EntityFramework\\JSON Processing\\CarDealer\\CarDealer\\CarDealer.csproj": {
+    "G:\\SoftUni-EntityFramework\\JSON Processing\\CarDealer\\CarDealer\\CarDealer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\SoftUni EnityFramework\\SoftUni-EntityFramework\\JSON Processing\\CarDealer\\CarDealer\\CarDealer.csproj",
+        "projectUniqueName": "G:\\SoftUni-EntityFramework\\JSON Processing\\CarDealer\\CarDealer\\CarDealer.csproj",
         "projectName": "CarDealer",
-        "projectPath": "G:\\SoftUni EnityFramework\\SoftUni-EntityFramework\\JSON Processing\\CarDealer\\CarDealer\\CarDealer.csproj",
-        "packagesPath": "C:\\Users\\valyo\\.nuget\\packages\\",
-        "outputPath": "G:\\SoftUni EnityFramework\\SoftUni-EntityFramework\\JSON Processing\\CarDealer\\CarDealer\\obj\\",
+        "projectPath": "G:\\SoftUni-EntityFramework\\JSON Processing\\CarDealer\\CarDealer\\CarDealer.csproj",
+        "packagesPath": "C:\\Users\\Valentin Markov\\.nuget\\packages\\",
+        "outputPath": "G:\\SoftUni-EntityFramework\\JSON Processing\\CarDealer\\CarDealer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\valyo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Valentin Markov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
