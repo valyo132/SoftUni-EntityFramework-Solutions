@@ -1,4 +1,6 @@
-﻿namespace CarDealer.Models
+﻿using Newtonsoft.Json;
+
+namespace CarDealer.Models
 {
     public class Car
     {
@@ -8,6 +10,7 @@
 
         public string Model { get; set; } = null!;
 
+        [JsonProperty("traveledDistance")]
         public long TravelledDistance { get; set; }
 
         public ICollection<Sale> Sales { get; set; } = new List<Sale>();    
