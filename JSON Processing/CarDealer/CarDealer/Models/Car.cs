@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CarDealer.Models
 {
@@ -10,8 +11,9 @@ namespace CarDealer.Models
 
         public string Model { get; set; } = null!;
 
-        [JsonProperty("traveledDistance")]
-        public long TravelledDistance { get; set; }
+        //[JsonProperty("traveledDistance")]
+        [Column("TravelledDistance")]
+        public long TraveledDistance { get; set; }
 
         public ICollection<Sale> Sales { get; set; } = new List<Sale>();    
 

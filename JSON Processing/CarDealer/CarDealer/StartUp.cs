@@ -2,6 +2,7 @@
 using CarDealer.DTOs;
 using CarDealer.Models;
 using Newtonsoft.Json;
+using System.Net.Http.Json;
 
 namespace CarDealer
 {
@@ -17,7 +18,7 @@ namespace CarDealer
             string json = "";
             string result = "";
 
-            // Problem 09
+            //Problem 09
             json = File.ReadAllText(@"../../../Datasets/suppliers.json");
             ImportSuppliers(context, json);
 
@@ -35,9 +36,148 @@ namespace CarDealer
 
             // Problem 13
             json = File.ReadAllText(@"../../../Datasets/sales.json");
-            result = ImportSales(context, json);
+            ImportSales(context, json);
+
+            // Problem 14
+            GetOrderedCustomers(context);
+
+            // Problem 15
+            GetCarsFromMakeToyota(context);
+
+            // Problem 16
+            GetLocalSuppliers(context);
+
+            // Problem 17
+            GetCarsWithTheirListOfParts(context);
+
+            // Problem 18
+            GetTotalSalesByCustomer(context);
+
+            // Problem 19
+            result = GetSalesWithAppliedDiscount(context);
 
             Console.WriteLine(result);
+        }
+
+        // Problem 19
+        public static string GetSalesWithAppliedDiscount(CarDealerContext context)
+        {
+            var sales = context.Sales
+                .OrderBy(s => s.Id)
+                .Take(10)
+                .Select(s => new
+                 {
+                     car = new
+                     {
+                         s.Car.Make,
+                         s.Car.Model,
+                         s.Car.TraveledDistance
+                     },
+                     customerName = s.Customer.Name,
+                     discount = $"{s.Discount:f2}",
+                     price = $"{s.Car.PartsCars.Sum(pc => pc.Part.Price):f2}",
+                     priceWithDiscount = $"{s.Car.PartsCars.Sum(pc => pc.Part.Price) * (1 - s.Discount / 100):f2}"
+                 }).ToArray();
+
+            return JsonConvert.SerializeObject(sales, Formatting.Indented);
+        }
+
+        // Problem 18
+        public static string GetTotalSalesByCustomer(CarDealerContext context)
+        {
+            var customers = context.Customers
+                .Where(c => c.Sales.Any())
+                .Select(c => new
+                {
+                    fullName = c.Name,
+                    boughtCars = c.Sales.Count,
+                    sales = c.Sales.SelectMany(c => c.Car.PartsCars.Select(p => p.Part.Price))
+                }).ToArray();
+
+            var result = customers.Select(c => new
+            {
+                c.fullName,
+                c.boughtCars,
+                spentMoney = c.sales.Sum()
+            }).OrderByDescending(c => c.spentMoney)
+                .ThenByDescending(c => c.boughtCars)
+                .ToArray();
+
+            return JsonConvert.SerializeObject(result, Formatting.Indented);
+        }
+
+        //// Problem 17
+        public static string GetCarsWithTheirListOfParts(CarDealerContext context)
+        {
+            var cars = context.Cars
+                .Select(c => new
+                {
+                    car = new
+                    {
+                        Make = c.Make,
+                        Model = c.Model,
+                        TraveledDistance = c.TraveledDistance,
+                        
+                    },
+                    parts = c.PartsCars
+                            .Select(cp => new
+                            {
+                                Name = cp.Part.Name,
+                                Price = $"{cp.Part.Price:f2}"
+                            })
+                }).ToArray();
+
+            return JsonConvert.SerializeObject(cars, Formatting.Indented);
+        }
+
+        //// Problem 16
+        public static string GetLocalSuppliers(CarDealerContext context)
+        {
+            var suppliers = context.Suppliers
+                .Where(s => !s.IsImporter)
+                .Select(s => new
+                {
+                    Id = s.Id,
+                    Name = s.Name,
+                    PartsCount = s.Parts.Count
+                }).ToArray();
+
+            return JsonConvert.SerializeObject(suppliers, Formatting.Indented);
+        }
+
+        // Problem 15
+        public static string GetCarsFromMakeToyota(CarDealerContext context)
+        {
+            var cars = context.Cars
+                .Where(c => c.Make == "Toyota")
+                .OrderBy(c => c.Model)
+                .ThenByDescending(c => c.TraveledDistance)
+                .Select(c => new
+                {
+                    c.Id,
+                    c.Make,
+                    c.Model,
+                    TraveledDistance = c.TraveledDistance
+                }).ToArray();
+
+            return JsonConvert.SerializeObject(cars, Formatting.Indented);
+        }
+
+        // Problem 14
+        public static string GetOrderedCustomers(CarDealerContext context)
+        {
+            var customers = context.Customers
+                .OrderBy(c => c.BirthDate)
+                .ThenBy(c => c.IsYoungDriver)
+                .Select(c => new
+                {
+                    Name = c.Name,
+                    BirthDate = c.BirthDate.ToString("dd/MM/yyyy"),
+                    IsYoungDriver = c.IsYoungDriver
+                })
+                .ToArray();
+
+            return JsonConvert.SerializeObject(customers, Formatting.Indented);
         }
 
         // Problem 13
@@ -74,7 +214,7 @@ namespace CarDealer
                 {
                     Make = car.Make,
                     Model = car.Model,
-                    TravelledDistance = car.TravelledDistance
+                    TraveledDistance = car.TravelledDistance
                 };
 
                 cars.Add(carToAdd);

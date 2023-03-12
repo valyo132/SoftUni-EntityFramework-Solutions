@@ -14,6 +14,6 @@ namespace CarDealer.DTOs
         public long TravelledDistance { get; set; }
 
         [JsonProperty("partsId")]
-        public int[] PartsId { get; set; }
+        public int[] PartsId { get; set; } = null!;
     }
 }
