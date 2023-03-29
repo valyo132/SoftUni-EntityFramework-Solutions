@@ -1,11 +1,2 @@
 <?xml version="1.0" encoding="utf-16"?>
-<Users>
-  <User username="fstoter">
-    <Purchases />
-    <TotalSpent>0</TotalSpent>
-  </User>
-  <User username="mgraveson">
-    <Purchases />
-    <TotalSpent>0</TotalSpent>
-  </User>
-</Users>
+<Users />
