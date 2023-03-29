@@ -1,0 +1,55 @@
+[
+	{
+		"Price": 0,
+		"ReleaseDate": "2013-07-09",
+		"Developer": "Valid Dev",
+		"Genre": "Valid Genre",
+		"Tags": [ "Valid Tag" ]
+	},
+	{
+		"Name": "Invalid",
+		"Price": -5,
+		"ReleaseDate": "2013-07-09",
+		"Developer": "Valid Dev",
+		"Genre": "Valid Genre",
+		"Tags": [ "Valid Tag" ]
+	},
+	{
+		"Name": "Invalid",
+		"Price": 0,
+		"ReleaseDate": "2013-07-09",
+		"Genre": "Valid Genre",
+		"Tags": [ "Valid Tag" ]
+	},
+	{
+		"Name": "Invalid",
+		"Price": 0,
+		"ReleaseDate": "2013-07-09",
+		"Developer": "Valid Dev",
+		"Tags": [ "Valid Tag" ]
+	},
+	{
+		"Name": "Invalid",
+		"Price": 0,
+		"ReleaseDate": "2013-07-09",
+		"Developer": "Valid Dev",
+		"Genre": "Valid Genre",
+		"Tags": []
+	},
+	{
+		"Name": "Dota 2",
+		"Price": 0,
+		"ReleaseDate": "2013-07-09",
+		"Developer": "Valve",
+		"Genre": "Action",
+		"Tags": [ "Multi-player", "Co-op", "Steam Trading Cards", "Steam Workshop", "SteamVR Collectibles", "In-App Purchases", "Valve Anti-Cheat enabled" ]
+	},
+	{
+		"Name": "MONSTER HUNTER: WORLD",
+		"Price": 59.99,
+		"ReleaseDate": "2018-08-09",
+		"Developer": "CAPCOM Co., Ltd.",
+		"Genre": "Action",
+		"Tags": [ "Single-player", "Multi-player", "Co-op", "Steam Achievements", "Partial Controller Support", "Stats" ]
+	}
+]
