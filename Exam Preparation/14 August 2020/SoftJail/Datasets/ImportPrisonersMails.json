@@ -1,0 +1,78 @@
+﻿[
+  {
+    "FullName": null,
+    "Nickname": "The Null",
+    "Age": 38,
+    "IncarcerationDate": "12/09/1967",
+    "ReleaseDate": "07/02/1989",
+    "Bail": 93934.2,
+    "CellId": 4,
+    "Mails": []
+  },
+  {
+    "FullName": "Hu",
+    "Nickname": "The Who",
+    "Age": 38,
+    "IncarcerationDate": "12/09/1967",
+    "ReleaseDate": "07/02/1989",
+    "Bail": 93934.2,
+    "CellId": 4,
+    "Mails": []
+  },
+  {
+    "FullName": "Stupidlylongnaaaaaame",
+    "Nickname": "The Who",
+    "Age": 38,
+    "IncarcerationDate": "12/09/1967",
+    "ReleaseDate": "07/02/1989",
+    "Bail": 93934.2,
+    "CellId": 4,
+    "Mails": []
+  },
+  {
+    "FullName": "Gosho",
+    "Nickname": "InvalidNicknameMan",
+    "Age": 38,
+    "IncarcerationDate": "12/09/1967",
+    "ReleaseDate": "07/02/1989",
+    "Bail": 93934.2,
+    "CellId": 4,
+    "Mails": []
+  },
+  {
+    "FullName": "Gosho",
+    "Nickname": "The Nickname",
+    "Age": 17,
+    "IncarcerationDate": "12/09/1967",
+    "ReleaseDate": "07/02/1989",
+    "Bail": 93934.2,
+    "CellId": 4,
+    "Mails": []
+  },
+  {
+    "FullName": "Gosho",
+    "Nickname": "The Nickname",
+    "Age": 66,
+    "IncarcerationDate": "12/09/1967",
+    "ReleaseDate": "07/02/1989",
+    "Bail": 93934.2,
+    "CellId": 4,
+    "Mails": []
+  },
+  {
+    "FullName": "Audrie Billion",
+    "Nickname": "The Rose",
+    "Age": 25,
+    "IncarcerationDate": "22/05/1964",
+    "ReleaseDate": "13/10/1990",
+    "Bail": 59651.38,
+    "CellId": 8,
+    "Mails": [
+      {
+        "Description": "make some difference",
+        "Sender": "Mikey Bothbie",
+        "Address": "This address is invalid! oops!"
+      }
+    ]
+  }
+]
